@@ -44,7 +44,40 @@ Simulation modules for Bartels Pumps and Ultrasonic Atomization Transducer. Thes
 - `hardware_simulator.py` - Base modules for pump and atomizer simulation
 - `multi_pump_controller.py` - Controller for managing multiple pumps simultaneously
 
-## Usage
+## Docker Support
+
+The simulator can be run in a Docker container for easy deployment and testing.
+
+### Building and Running with Docker
+
+```bash
+# Build the Docker image
+docker build -t pump-simulator .
+
+# Run the container
+docker run --name pump-sim pump-simulator
+
+# To run a specific file
+docker run --name pump-sim pump-simulator python multi_pump_controller.py
+```
+
+### Using Docker Compose
+
+```bash
+# Start the simulator
+docker-compose up -d
+
+# Execute a command in the running container
+docker-compose exec simulator python multi_pump_controller.py
+
+# View logs
+docker-compose logs -f
+
+# Stop the simulator
+docker-compose down
+```
+
+## Python Usage Examples
 
 ### Basic Usage Example
 

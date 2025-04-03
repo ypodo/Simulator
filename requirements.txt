@@ -1,0 +1,5 @@
+# No external dependencies required for the base simulation
+# These are only for testing and development
+pytest==7.4.0
+pytest-cov==4.1.0
+# Add any future dependencies here
